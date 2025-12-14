@@ -2,10 +2,10 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const nyan = new Image();
-nyan.src = "webss/nyan.jpeg";
+nyan.src = "./nyan.jpeg";
 
 const bote = new Image();
-bote.src = "webss/bote.jpeg";
+bote.src = "./bote.jpeg";
 
 let y = 200;
 let velocity = 0;
@@ -44,8 +44,10 @@ function update() {
   ctx.drawImage(nyan, 40, y, 60, 45);
 
   if (frame % 120 === 0) {
-    let posY = Math.random() * 300;
-    obstacles.push({ x: canvas.width, y: posY });
+    obstacles.push({
+      x: canvas.width,
+      y: Math.random() * 300
+    });
   }
 
   obstacles.forEach(o => {
@@ -73,4 +75,3 @@ function update() {
 }
 
 update();
-
