@@ -2,10 +2,10 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const nyan = new Image();
-nyan.src = "nyan.png";
+nyan.src = "webss/nyan.jpeg";
 
 const bote = new Image();
-bote.src = "bote.png";
+bote.src = "webss/bote.jpeg";
 
 let y = 200;
 let velocity = 0;
@@ -73,3 +73,4 @@ function update() {
 }
 
 update();
+
